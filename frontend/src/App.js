@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './styles/App.css'
+import React from 'react'
+import Nav from './components/Nav';
+// import { Routes, Route } from 'react-router-dom'
+// import Map from './components/Map'
+// import { withAuthenticationRequired } from '@auth0/auth0-react'
+// import { Loading } from './'
+// import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router'
+import LoginButton from './components/LoginButton'
+import Map from './components/Map'
 
-function App() {
+function Main() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='SigninPage'>
+      <Nav />
+      <Outlet />
+      <LoginButton />
+      <Map />
     </div>
   );
 }
 
-export default App;
+export default Main;

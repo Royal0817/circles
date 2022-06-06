@@ -1,0 +1,21 @@
+
+body {
+  padding: 2rem;
+  background-image: linear-gradient(to right, rgb(52, 91, 75), rgb(51, 139, 147));
+}
+
+button {
+  margin: 1em;
+  padding: 1em 2em;
+  cursor: pointer;
+}
+
+/* .Nav {
+  display: flex;
+  background-color: green;
+} */
+
+/* .profile {
+  display: flex;
+  justify-content: right;
+} */
