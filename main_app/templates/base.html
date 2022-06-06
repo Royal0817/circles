@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Circles</title>
 </head>
 {% if user.is_authenticated %}
-                    <div class="navbar-menu navbar-end">
-                        <span class="navbar-item">Welcome: {{user.username}}</span>
-                        <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-                    </div>
-                {% else %}
-                    <div class="navbar-menu navbar-end">
-                        <a class="navbar-item" href="{% url 'login' %}">Log In</a>
-                    </div>
-                {% endif %}
+    <div class="navbar-menu navbar-end">
+        <span class="navbar-item">Welcome: {{user.username}}</span>
+        <a class="navbar-item" href=''>Home</a>
+        <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+    </div>
+{% else %}
+    <div class="navbar-menu navbar-end">
+       <a class="navbar-item" href="{% url 'login' %}">Log In</a>
+        
+       <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
+    </div>
+{% endif %}
 
 <body>
     
