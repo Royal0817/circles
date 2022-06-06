@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+{% if user.is_authenticated %}
+                    <div class="navbar-menu navbar-end">
+                        <span class="navbar-item">Welcome: {{user.username}}</span>
+                        <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                {% else %}
+                    <div class="navbar-menu navbar-end">
+                        <a class="navbar-item" href="{% url 'login' %}">Log In</a>
+                    </div>
+                {% endif %}
+
 <body>
-    <h1>hello world!</h1>
-    {% block content %}
+    
+    {% block body %}
     {% endblock %}
 </body>
 </html>
